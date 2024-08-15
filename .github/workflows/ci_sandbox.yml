@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ACTOR: ${{ github.actor }}
-
+      USERNAME2: ${{ vars.USERNAME2 }}
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
@@ -31,4 +31,4 @@ jobs:
           echo "${{ github.action }}"
           echo "${{ env.ACTOR }}"
           echo "${ACTOR}"
-          
+          echo "${USERNAME2}"
