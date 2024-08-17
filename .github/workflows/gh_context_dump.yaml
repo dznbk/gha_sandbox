@@ -1,4 +1,5 @@
 name: github context dump toJson function
+run-name: Run by @${{ github.actor }} ${{ github.event_name }} ${{ github.ref }}
 on: push
 jobs:
   dump:
