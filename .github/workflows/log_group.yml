@@ -7,8 +7,11 @@ jobs:
       - run: |
             echo "::group::Show environment variables"
             printenv
+            echo "::endgroup::"
+            echo "::group::Show hoge fuga"
             echo "hoge"
-            pwd
             echo "fuga"
-            whoami
+            echo "::endgroup::"
+            echo "::group::Show environment variables"
+            echo "aida ni hasandara"
             echo "::endgroup::"
