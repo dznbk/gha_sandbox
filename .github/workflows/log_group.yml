@@ -1,0 +1,17 @@
+name: Log group
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+            echo "::group::Show environment variables"
+            printenv
+            echo "::endgroup::"
+            echo "::group::Show hoge fuga"
+            echo "hoge"
+            echo "fuga"
+            echo "::endgroup::"
+            echo "::group::Show environment variables"
+            echo "aida ni hasandara"
+            echo "::endgroup::"
