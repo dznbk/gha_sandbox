@@ -1,8 +1,8 @@
 name: Job Summary example
 on: push
 jobs:
-  log:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo "## Jobサマリーのタイトル" >> "${GITHUB_STEP_SUMMARY}"
+    log:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "::notice::noticeだよ"
+            - run: echo "## Jobサマリーのタイトル" >> "${GITHUB_STEP_SUMMARY}"
