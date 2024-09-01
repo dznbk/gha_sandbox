@@ -1,0 +1,10 @@
+name: Annotation example
+on: push
+jobs:
+    log:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "::error::kore ha error"
+            - run: echo "::warning::これはwarning"
+            - run: echo "::notice::noticeだよ"
+            
