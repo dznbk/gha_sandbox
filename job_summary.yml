@@ -4,5 +4,7 @@ jobs:
     log:
         runs-on: ubuntu-latest
         steps:
+            - run: echo "::error::kore ha error"
+            - run: echo "::warning::これはwarning"
             - run: echo "::notice::noticeだよ"
-            - run: echo "## Jobサマリーのタイトル" >> "${GITHUB_STEP_SUMMARY}"
+            
