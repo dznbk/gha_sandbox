@@ -6,13 +6,3 @@ jobs:
     steps:
       - run: |
           echo "## Jobサマリーのタイトル" >> "${GITHUB_STEP_SUMMARY}"
-          echo "1行目" >> "${GITHUB_STEP_SUMMARY}"
-          echo "2行目" >> "${GITHUB_STEP_SUMMARY}"
-          echo "---" >> "${GITHUB_STEP_SUMMARY}"
-          echo "- 箇条書き1" >> "${GITHUB_STEP_SUMMARY}"
-          echo "- 箇条書き2" >> "${GITHUB_STEP_SUMMARY}"
-          echo "+ 数字付き" >> "${GITHUB_STEP_SUMMARY}"
-          echo "+ 数字付き" >> "${GITHUB_STEP_SUMMARY}"
-          echo "- [ ] 無駄なチェックボックス" >> "${GITHUB_STEP_SUMMARY}"
-
-          
