@@ -1,0 +1,19 @@
+name: Env workflow example
+on: 
+    workflow_dispatch:
+        inputs:
+            env-name:
+                type: environment
+                default: test
+                required: false
+                description: "環境名の指定（default: test）"
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        environment: ${{ inputs.env-name }}
+        env:
+            USERNAME: ${{ vars.USERNAME }}
+            PASSWORD: ${{ secrets.PASSWORD }}
+        steps:
+            - run: echo "${USERNAME}"
+            - run: echo "${PASSWORD:0:1} ${PASSWORD#?}"
