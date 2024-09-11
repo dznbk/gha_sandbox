@@ -11,9 +11,10 @@ jobs:
             result: ${{ steps.first.outputs.result }}
     second:
         runs-on: ubuntu-latest
-        needs: first
+        needs: [first]
         steps:
-            - env: FIRST_RESULT: ${{ needs.first.outputs.result }}
+            - env: 
+                FIRST_RESULT: ${{ needs.first.outputs.result }}
               run: echo "${FIRST_RESULT}"
     third:
         runs-on: ubuntu-latest
