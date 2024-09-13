@@ -25,3 +25,6 @@ runs:
     - id: current 
       run: echo "date=$(date)" >> "${GITHUB_OUTPUT}"
       shell: bash
+    - id: hoge
+      run: echo "deteru?"
+      shell: bash
